@@ -1,8 +1,8 @@
 <?php
 	$ALGORITHM = 'AES-128-CBC';
         $IV  = '12dasdq3g5b2434b';
-	#define(ACCESS_KEY, "AKIAIXZAWFYJCHPIXCCQ");
-       # define(SECRET_KEY, "yMvI0Vq91stDNOZ5N/FJ88wDMNNskHwiy4C6zGK5");
+	#define(ACCESS_KEY, "YOUR ACCESS KEY HERE");
+       # define(SECRET_KEY, "YOUR SECRETE KEY HERE");
 	require 'C:\Users\kalya\vendor\autoload.php';
         use Aws\S3\S3Client;
         session_start();
@@ -40,12 +40,12 @@
 							    'version' => 'latest',
 							    'region'  => 'us-east-1',
 							    'credentials' => [
-							    'key'    => 'AKIAIXZAWFYJCHPIXCCQ',
-							    'secret' => 'yMvI0Vq91stDNOZ5N/FJ88wDMNNskHwiy4C6zGK5'
+							    'key'    => 'YOUR ACCESS KEY HERE',
+							    'secret' => 'YOUR SECRETE KEY HERE'
 									  ]
 							));
 					$response = $clientS3->putObject(array(
-						    'Bucket' => "abhishekvk",
+						    'Bucket' => "BUCKET NAME",
 						    'Key'    => $_FILES['myfile']['name'],
 						    'SourceFile' => $_FILES['myfile']['tmp_name'],
 						    'ACL' => 'public-read'
