@@ -8,8 +8,8 @@
 							    'version' => 'latest',
 							    'region'  => 'us-east-1',
 							    'credentials' => [
-							    'key'    => 'AKIAIXZAWFYJCHPIXCCQ',
-							    'secret' => 'yMvI0Vq91stDNOZ5N/FJ88wDMNNskHwiy4C6zGK5'
+							    'key'    => 'YOUR ACCESS KEY HERE',
+							    'secret' => 'YOUR SECRET KEY HERE'
 									  ]
 							));
 		}catch(Exception $e)
@@ -17,8 +17,8 @@
 			die("Error:".$e->getMessage());
 
 			}
-	$result = $s3->listObjects(array('Bucket' =>"abhishekvk"));
-	$bucket="abhishekvk";
+	$result = $s3->listObjects(array('Bucket' =>"BUCKET NAME"));
+	$bucket="BUCKET NAME";
 	foreach($result['Contents'] as $object)
 						{
 							#echo $object['Key']."\n";
